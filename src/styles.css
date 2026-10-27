@@ -1,0 +1,88 @@
+@import "tailwindcss";
+@import "@fontsource/ibm-plex-sans/400.css";
+@import "@fontsource/ibm-plex-sans/500.css";
+@import "@fontsource/ibm-plex-sans/600.css";
+
+@font-face {
+  font-family: "Vazirmatn";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  unicode-range: U+0600-06FF, U+0750-077F, U+0870-089F, U+08A0-08FF, U+FB50-FDFF, U+FE70-FEFF, U+200C, U+200D;
+  src: url("../node_modules/@fontsource/vazirmatn/files/vazirmatn-arabic-400-normal.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Vazirmatn";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  unicode-range: U+0600-06FF, U+0750-077F, U+0870-089F, U+08A0-08FF, U+FB50-FDFF, U+FE70-FEFF, U+200C, U+200D;
+  src: url("../node_modules/@fontsource/vazirmatn/files/vazirmatn-arabic-500-normal.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Vazirmatn";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  unicode-range: U+0600-06FF, U+0750-077F, U+0870-089F, U+08A0-08FF, U+FB50-FDFF, U+FE70-FEFF, U+200C, U+200D;
+  src: url("../node_modules/@fontsource/vazirmatn/files/vazirmatn-arabic-600-normal.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Vazirmatn";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  unicode-range: U+0600-06FF, U+0750-077F, U+0870-089F, U+08A0-08FF, U+FB50-FDFF, U+FE70-FEFF, U+200C, U+200D;
+  src: url("../node_modules/@fontsource/vazirmatn/files/vazirmatn-arabic-700-normal.woff2") format("woff2");
+}
+
+@theme {
+  --font-sans: "Vazirmatn", "IBM Plex Sans", Tahoma, sans-serif;
+  --font-num: "IBM Plex Sans", "Vazirmatn", sans-serif;
+  --color-bg: #121614;
+  --color-surface: #1b221e;
+  --color-surface-2: #24302a;
+  --color-fg: #e8f0eb;
+  --color-muted: #b7c3bb;
+  --color-line: #314037;
+  --color-brass: #d2b07a;
+  --color-up: #5cbf8a;
+  --color-down: #e08b82;
+  --color-up-soft: #173228;
+  --color-down-soft: #3a2422;
+  --radius-md: 0.375rem;
+}
+
+@layer base {
+  html {
+    background: var(--color-bg);
+    color: var(--color-fg);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  body {
+    min-height: 100vh;
+    background: var(--color-bg);
+  }
+  h1, h2, h3 {
+    text-wrap: balance;
+  }
+  p {
+    text-wrap: pretty;
+  }
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
